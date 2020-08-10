@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jully's Birthday</title>
+  <link rel="stylesheet" type="text/css" href="jully.css">
+</head>
+<body>
+  <div id="card">
+    <div id="card-inside">
+      <div class="wrap">
+        <p>Hey Jula,</p>
+        <p>I miss our long conversation </p>
+        <p>There are even times we fight</p>
+        <p>But I know you are  always there</p>
+        <p> And I know you will always care</p>
+        <p>I miss you so much dear</p>
+        <p>Best time with best person</p>
+          
+        <!-- <p><a href="http://pandey47.0fees.us/index4.html">NEXT</a></p> -->
+        <p class="signed">Jinkal</p>
+        
+      </div>
+    </div>
+
+    <div id="card-front">
+      <div class="wrap">
+        <h1>Happy Birthday Jully!</h1>
+      </div>
+      <button id="open">&gt;</button>
+      <button id="close">&lt;</button>
+    </div>
+  </div>
+  <script>
+    (function() {
+  function $(id) {
+    return document.getElementById(id);
+  }
+
+  var card = $('card'),
+      openB = $('open'),
+      closeB = $('close'),
+      timer = null;
+  console.log('wat', card);
+  openB.addEventListener('click', function () {
+    card.setAttribute('class', 'open-half');
+    if (timer) clearTimeout(timer);
+    timer = setTimeout(function () {
+      card.setAttribute('class', 'open-fully');
+      timer = null;
+    }, 1000);
+  });
+
+  closeB.addEventListener('click', function () {
+    card.setAttribute('class', 'close-half');
+    if (timer) clearTimerout(timer);
+    timer = setTimeout(function () {
+      card.setAttribute('class', '');
+      timer = null;
+    }, 1000);
+  });
+
+}());
+
+  </script>
+
+</body>
+</html>
